@@ -1,6 +1,10 @@
 import React from 'react'
 import DashboardIcon from '../../assets/images/DashboardIcon.svg'
-import UserIcon from '../../assets/images/user.svg'
+import MaleIcon from '../../assets/images/Male.svg'
+import DhaIcon from '../../assets/images/dha.svg'
+import RefreshIcon from '../../assets/images/refresh.svg'
+import ChainLinkIcon from '../../assets/images/chain-link.svg'
+import SupportIcon from '../../assets/images/support.svg'
 import './Header.css'
 
 function Header() {
@@ -18,23 +22,28 @@ function Header() {
         <div className="margin-box">
           <div className="margin-box-left">
             <div className="margin-icon">
-              <span className="margin-icon-text">ध</span>
+              <img src={DhaIcon} alt="DHA" className="dha-icon" />
             </div>
             <div className="margin-info">
-              <div className="margin-label">Margin Available</div>
-              <div className="margin-amount">
-                <span className="currency">₹</span>
-                <span className="amount">20,00,764.64</span>
+              <div className="margin-label-row">
+                <span className="margin-label">Margin Available</span>
+                <button className="refresh-button">
+                  <img src={RefreshIcon} alt="Refresh" className="refresh-icon" />
+                </button>
               </div>
               <div className="token-expiry">Token Expiry: 30th Dec 25 | 12:22 AM</div>
             </div>
           </div>
           <div className="margin-box-right">
-            <div className="connected-status">
-              <svg className="link-icon" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                <path d="M6 1L7.5 4.5L11 6L7.5 7.5L6 11L4.5 7.5L1 6L4.5 4.5L6 1Z" stroke="currentColor" strokeWidth="1" fill="none"/>
-              </svg>
-              <span>Connected</span>
+            <div className="margin-amount-section">
+              <div className="margin-amount">
+                <span className="currency">₹</span>
+                <span className="amount">20,00,764.64</span>
+              </div>
+              <div className="connected-status">
+                <span>Connected</span>
+                <img src={ChainLinkIcon} alt="Chain Link" className="link-icon" />
+              </div>
             </div>
             <button className="margin-menu-button">
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -49,11 +58,7 @@ function Header() {
         {/* Icons and User Profile */}
         <div className="header-right">
         <button className="header-icon-button">
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <circle cx="10" cy="7" r="3.5" stroke="white" strokeWidth="1.5" fill="none"/>
-            <path d="M5 16.5C5 13.1863 7.18629 10.5 10.5 10.5C13.8137 10.5 16.5 13.1863 16.5 16.5" stroke="white" strokeWidth="1.5" strokeLinecap="round"/>
-            <text x="10" y="12.5" textAnchor="middle" fill="white" fontSize="7" fontFamily="Arial, sans-serif" fontWeight="bold">@</text>
-          </svg>
+          <img src={SupportIcon} alt="Support" className="support-icon" />
         </button>
         <button className="header-icon-button notification-button">
           <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -63,9 +68,9 @@ function Header() {
           <span className="notification-badge">1</span>
         </button>
         <div className="header-divider"></div>
-        <div className="user-profile">
+        <div className="user-profile-header">
           <div className="user-avatar-wrapper">
-            <img src={UserIcon} alt="User" className="user-avatar" />
+            <img src={MaleIcon} alt="User" className="user-avatar" />
             <div className="online-status"></div>
           </div>
           <div className="user-info">
