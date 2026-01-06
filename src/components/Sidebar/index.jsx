@@ -9,6 +9,8 @@ import UserIcon from '../../assets/images/user.svg'
 import WhiteXIcon from '../../assets/images/white-X.svg'
 import StarIcon from '../../assets/images/star.svg'
 import BlueSidebarBg from '../../assets/images/bluesidebarbg.png'
+import MaleIcon from '../../assets/images/Male.svg'
+import SettingsIcon from '../../assets/images/settings.svg'
 import './Sidebar.css'
 
 function Sidebar() {
@@ -110,17 +112,11 @@ function Sidebar() {
 
         <div className="user-profile">
           <div className="user-avatar">
-            <img src={UserIcon} alt="User" className="user-avatar-icon" />
+            <img src={MaleIcon} alt="User" className="user-avatar-icon" />
           </div>
           {sidebarOpen && <span className="user-name">John Smith</span>}
           <button className="settings-button">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path d="M8 10C9.10457 10 10 9.10457 10 8C10 6.89543 9.10457 6 8 6C6.89543 6 6 6.89543 6 8C6 9.10457 6.89543 10 8 10Z" stroke="white" strokeWidth="1.5"/>
-              <path d="M13.3333 8C13.3333 7.63181 13.4738 7.27857 13.7239 7.02852C13.9739 6.77848 14.3272 6.638 14.6953 6.638C15.0635 6.638 15.4167 6.77848 15.6668 7.02852C15.9168 7.27857 16.0573 7.63181 16.0573 8C16.0573 8.36819 15.9168 8.72143 15.6668 8.97148C15.4167 9.22152 15.0635 9.362 14.6953 9.362C14.3272 9.362 13.9739 9.22152 13.7239 8.97148C13.4738 8.72143 13.3333 8.36819 13.3333 8Z" stroke="white" strokeWidth="1.5"/>
-              <path d="M2.66667 8C2.66667 7.63181 2.80715 7.27857 3.05719 7.02852C3.30724 6.77848 3.66048 6.638 4.02867 6.638C4.39686 6.638 4.7501 6.77848 5.00014 7.02852C5.25019 7.27857 5.39067 7.63181 5.39067 8C5.39067 8.36819 5.25019 8.72143 5.00014 8.97148C4.7501 9.22152 4.39686 9.362 4.02867 9.362C3.66048 9.362 3.30724 9.22152 3.05719 8.97148C2.80715 8.72143 2.66667 8.36819 2.66667 8Z" stroke="white" strokeWidth="1.5"/>
-              <path d="M8 2.66667C8 2.29848 8.14048 1.94524 8.39052 1.69519C8.64057 1.44515 8.99381 1.30467 9.362 1.30467C9.73019 1.30467 10.0834 1.44515 10.3335 1.69519C10.5835 1.94524 10.724 2.29848 10.724 2.66667C10.724 3.03486 10.5835 3.3881 10.3335 3.63814C10.0834 3.88819 9.73019 4.02867 9.362 4.02867C8.99381 4.02867 8.64057 3.88819 8.39052 3.63814C8.14048 3.3881 8 3.03486 8 2.66667Z" stroke="white" strokeWidth="1.5"/>
-              <path d="M8 13.3333C8 12.9651 8.14048 12.6119 8.39052 12.3618C8.64057 12.1118 8.99381 11.9713 9.362 11.9713C9.73019 11.9713 10.0834 12.1118 10.3335 12.3618C10.5835 12.6119 10.724 12.9651 10.724 13.3333C10.724 13.7015 10.5835 14.0547 10.3335 14.3048C10.0834 14.5548 9.73019 14.6953 9.362 14.6953C8.99381 14.6953 8.64057 14.5548 8.39052 14.3048C8.14048 14.0547 8 13.7015 8 13.3333Z" stroke="white" strokeWidth="1.5"/>
-            </svg>
+            <img src={SettingsIcon} alt="Settings" className="settings-icon" />
           </button>
         </div>
       </div>
