@@ -1,0 +1,103 @@
+.nifty-columns-container {
+
+  width: 81.86%;
+  height: 77px;
+  display: flex;
+  align-items: center;
+  background-color: #101010;
+  border-radius: 8px;
+  border: 1px solid #474747;
+  padding-top: 15px;
+  padding-right: 16px;
+  padding-bottom: 15px;
+  padding-left: 16px;
+  gap: 10px;
+  opacity: 1;
+}
+
+.nifty-column-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  padding: 0;
+}
+
+
+.nifty-column-name {
+  color: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
+
+.nifty-column-content {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.nifty-column-value {
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.nifty-column-change {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.nifty-column-change.positive {
+  color: #22D606;
+}
+
+.nifty-column-change.negative {
+  color: #E01212;
+}
+
+.nifty-column-divider {
+  width: 1px;
+  height: 40px;
+  background-color: #303030;
+  flex-shrink: 0;
+}
+
+@media (max-width: 1200px) {
+  .nifty-columns-container {
+    flex-wrap: wrap;
+  }
+  
+  .nifty-column-item {
+    flex: 0 0 calc(50% - 8px);
+    padding: 8px;
+  }
+  
+  .nifty-column-divider {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .nifty-column-item {
+    flex: 0 0 100%;
+  }
+}
+
