@@ -20,6 +20,18 @@
   flex-direction: column;
   padding: 20px;
   overflow-y: auto;
+  overflow-x: visible;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.sidebar-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.sidebar-content {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .logo {
@@ -160,20 +172,31 @@
 }
 
 .promo-card {
-  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
   border-radius: 12px;
   padding: 16px;
   margin-bottom: 16px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: visible;
 }
 
 .promo-logo {
+  width: 24px;
+  height: 24px;
   margin-bottom: 12px;
+  object-fit: contain;
 }
 
 .promo-title {
-  color: white;
-  font-size: 16px;
+  color: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
   font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
   margin-bottom: 8px;
 }
 
@@ -191,9 +214,13 @@
   background-color: white;
   color: black;
   border: none;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
+  border-radius: 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14.18px;
+  line-height: 100%;
+  letter-spacing: 0%;
   cursor: pointer;
 }
 
@@ -204,26 +231,63 @@
 .credits-section {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   padding: 12px;
   background-color: #2a2a2a;
   border-radius: 8px;
   margin-bottom: 16px;
 }
 
-.credits-icon {
+.credits-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
 }
 
-.credits-section span {
-  color: white;
-  font-size: 14px;
+.credits-icon {
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.credits-label {
+  color: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
   flex: 1;
 }
 
-.credits-count {
-  color: #888;
-  font-size: 14px;
+.credits-count-badge {
+  display: flex;
+  align-items: center;
+  width: 60px;
+  height: 35px;
+  gap: 3px;
+  border-radius: 4.69px;
+  padding-top: 8px;
+  padding-right: 13px;
+  padding-bottom: 8px;
+  padding-left: 13px;
+  background: #FFFFFF14;
+  flex-shrink: 0;
+}
+
+.credits-count-current {
+  color: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 21px;
+}
+
+.credits-count-total {
+  color: #888888;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .user-profile {

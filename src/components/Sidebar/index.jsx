@@ -6,6 +6,9 @@ import BriefcaseIcon from '../../assets/images/Briefcase.svg'
 import ZigZagIcon from '../../assets/images/zig-zag.svg'
 import BarChartIcon from '../../assets/images/BarChart.svg'
 import UserIcon from '../../assets/images/user.svg'
+import WhiteXIcon from '../../assets/images/white-X.svg'
+import StarIcon from '../../assets/images/star.svg'
+import BlueSidebarBg from '../../assets/images/bluesidebarbg.png'
 import './Sidebar.css'
 
 function Sidebar() {
@@ -83,30 +86,29 @@ function Sidebar() {
           ))}
         </div>
 
-        {/* {sidebarOpen && (
+        {sidebarOpen && (
           <>
-            <div className="promo-card">
-              <svg className="promo-logo" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M2 17L12 22L22 17" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                <path d="M2 12L12 17L22 12" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
+            <div className="promo-card" style={{ backgroundImage: `url(${BlueSidebarBg})` }}>
+              <img src={WhiteXIcon} alt="X" className="promo-logo" />
               <div className="promo-title">Contact Us</div>
               <div className="promo-description">A.I Trading Bots Trading Bots Lorem Ipsum</div>
               <button className="promo-button">Support</button>
             </div>
 
             <div className="credits-section">
-              <svg className="credits-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                <path d="M8 1L10.163 5.182L15 6.09L11.5 9.182L12.326 14L8 11.818L3.674 14L4.5 9.182L1 6.09L5.837 5.182L8 1Z" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-              <span>Live Credits</span>
-              <span className="credits-count">2/4</span>
+              <div className="credits-icon-container">
+                <img src={StarIcon} alt="Star" className="credits-icon" />
+              </div>
+              <span className="credits-label">Live Credits</span>
+              <div className="credits-count-badge">
+                <span className="credits-count-current">2</span>
+                <span className="credits-count-total">/4</span>
+              </div>
             </div>
           </>
-        )} */}
+        )}
 
-        {/* <div className="user-profile">
+        <div className="user-profile">
           <div className="user-avatar">
             <img src={UserIcon} alt="User" className="user-avatar-icon" />
           </div>
@@ -120,7 +122,7 @@ function Sidebar() {
               <path d="M8 13.3333C8 12.9651 8.14048 12.6119 8.39052 12.3618C8.64057 12.1118 8.99381 11.9713 9.362 11.9713C9.73019 11.9713 10.0834 12.1118 10.3335 12.3618C10.5835 12.6119 10.724 12.9651 10.724 13.3333C10.724 13.7015 10.5835 14.0547 10.3335 14.3048C10.0834 14.5548 9.73019 14.6953 9.362 14.6953C8.99381 14.6953 8.64057 14.5548 8.39052 14.3048C8.14048 14.0547 8 13.7015 8 13.3333Z" stroke="white" strokeWidth="1.5"/>
             </svg>
           </button>
-        </div> */}
+        </div>
       </div>
       
       <div className="sidebar-border">
