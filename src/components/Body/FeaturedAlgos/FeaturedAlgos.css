@@ -2,23 +2,28 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  background: #101010;
+  border: 1px solid #303030;
+  padding: 20px;
+  border-radius: 12px;
 }
 
 .featured-algos-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
 .featured-algos-title-section {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 }
 
-.featured-algos-flame-icon {
+.featured-algos-trophy-icon {
   width: 20px;
   height: 20px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .featured-algos-title {
@@ -30,15 +35,15 @@
 }
 
 .featured-algos-info-icon {
-  color: #C7C7C7;
-  width: 16px;
-  height: 16px;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
   cursor: pointer;
-  transition: color 0.2s;
+  transition: opacity 0.2s;
 }
 
 .featured-algos-info-icon:hover {
-  color: #FFFFFF;
+  opacity: 0.8;
 }
 
 .featured-algos-cards {
@@ -54,19 +59,70 @@
   flex-direction: column;
   gap: 16px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.featured-algos-card-highest-win-rate {
-  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+.featured-algos-card-badge {
+  position: absolute;
+  top: -2px;
+  right: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-top-right-radius: 8.53px;
+  border-bottom-left-radius: 8.53px;
+  color: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  z-index: 10;
 }
 
-.featured-algos-card-most-deployed {
-  background: linear-gradient(135deg, #6b21a8 0%, #a855f7 100%);
+.featured-algos-card-badge-highest-win-rate {
+  width: 156px;
+  height: 34px;
+  background: linear-gradient(93.88deg, #3F72FF -4.79%, #0036B2 53.84%, #47B4B4 113.68%);
 }
 
-.featured-algos-card-most-profitable {
-  background: linear-gradient(135deg, #166534 0%, #22c55e 100%);
+.featured-algos-card-badge-most-deployed {
+  width: 156px;
+  height: 32.92890930175781px;
+  padding-top: 7.46px;
+  padding-right: 12.8px;
+  padding-bottom: 7.46px;
+  padding-left: 12.8px;
+  gap: 10.66px;
+  background: linear-gradient(92.14deg, #0066B1 -8.09%, #E34DFF 136.29%);
+}
+
+.featured-algos-card-badge-most-profitable {
+  width: 156px;
+  height: 32.92890930175781px;
+  padding-top: 7.46px;
+  padding-right: 12.8px;
+  padding-bottom: 7.46px;
+  padding-left: 12.8px;
+  gap: 10.66px;
+  background: linear-gradient(92.49deg, #02A10C -8.04%, #A17600 101.25%);
+}
+
+.featured-algos-badge-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.featured-algos-badge-text {
+  color: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  white-space: nowrap;
 }
 
 .featured-algos-card-header {
@@ -76,14 +132,21 @@
 }
 
 .featured-algos-card-icon {
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.2);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(111.72deg, #3F72FF -92.12%, #0036B2 24.13%, #47B4B4 142.78%);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #FFFFFF;
+}
+
+.featured-algos-three-arrows-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
 }
 
 .featured-algos-card-label {
@@ -99,25 +162,96 @@
 .featured-algos-card-content {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
   flex: 1;
+}
+
+.featured-algos-card-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .featured-algos-card-title {
   color: #FFFFFF;
   font-family: 'DM Sans', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
+  font-weight: 600;
+  font-size: 18px;
   line-height: 1.4;
+  margin: 0;
+}
+
+.featured-algos-card-title.underlined {
+  text-decoration: underline;
+  text-decoration-color: #3F72FF;
+  text-underline-offset: 4px;
+}
+
+.featured-algos-card-provider {
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
+.featured-algos-card-provider-text {
+  color: #C7C7C7;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+
 .featured-algos-verified-icon {
   width: 16px;
   height: 16px;
+  object-fit: contain;
   flex-shrink: 0;
+}
+
+.featured-algos-card-metric-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 8px;
+}
+
+.featured-algos-card-metric-section.win-rate {
+  background: linear-gradient(113.73deg, rgba(0, 188, 53, 0.17) 7.25%, rgba(0, 255, 38, 0.17) 173.86%);
+}
+
+.featured-algos-card-metric-section.most-deployed {
+  background: linear-gradient(92.14deg, rgba(0, 102, 177, 0.17) -8.09%, rgba(227, 77, 255, 0.17) 136.29%);
+}
+
+.featured-algos-card-metric-section.most-profitable {
+  background: linear-gradient(92.14deg, rgba(0, 102, 177, 0.17) -8.09%, rgba(227, 77, 255, 0.17) 136.29%);
+}
+
+.featured-algos-metric-label {
+  color: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.featured-algos-metric-value {
+  color: #22D606;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.featured-algos-metric-value.deployed {
+  background: linear-gradient(102.45deg, #89CDFF 26.65%, #E34DFF 159.96%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+
+.featured-algos-metric-value.profitable {
+  color: #22D606;
+  font-weight: 600;
 }
 
 .featured-algos-card-metric {
@@ -150,11 +284,22 @@
 }
 
 .featured-algos-card-button-view {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: transparent;
+  border: 1px solid #474747;
 }
 
 .featured-algos-card-button-deploy {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.featured-algos-card-button-deploy.featured-algos-card-button-most-deployed {
+  background: linear-gradient(92.14deg, #0066B1 -8.09%, #E34DFF 136.29%);
+  border: none;
+}
+
+.featured-algos-card-button-deploy.featured-algos-card-button-most-profitable {
+  background: linear-gradient(92.49deg, #02A10C -8.04%, #A17600 101.25%);
+  border: none;
 }
 
 @media (max-width: 1200px) {

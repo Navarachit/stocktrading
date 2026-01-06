@@ -1,5 +1,15 @@
 import React from 'react'
 import './FeaturedAlgos.css'
+import TrophyIcon from '../../../assets/images/trophy.svg'
+import WhiteCautionIcon from '../../../assets/images/whiteCaution.svg'
+import BlueBg from '../../../assets/images/bluebg.png'
+import PurpleBg from '../../../assets/images/purplebg.png'
+import GreenBg from '../../../assets/images/greenbg.png'
+import TrophyBadgeIcon from '../../../assets/images/trophy.svg'
+import ManyPeopleIcon from '../../../assets/images/manyPeople.svg'
+import WhiteZigZagIcon from '../../../assets/images/white-zigzag.svg'
+import ThreeArrowsIcon from '../../../assets/images/threeArrows.svg'
+import BlueTickIcon from '../../../assets/images/bluetick.png'
 
 function FeaturedAlgos() {
   const featuredCards = [
@@ -36,64 +46,72 @@ function FeaturedAlgos() {
     <div className="featured-algos-section">
       <div className="featured-algos-header">
         <div className="featured-algos-title-section">
-          <svg className="featured-algos-flame-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M10 2C10 2 6 4 6 8C6 10 7 12 8 13C8 11 9 9 10 7C11 9 12 11 12 13C13 12 14 10 14 8C14 4 10 2 10 2Z" fill="#ff6b35"/>
-          </svg>
-          <h2 className="featured-algos-title">Featured Algos</h2>
+          <img src={TrophyIcon} alt="Trophy" className="featured-algos-trophy-icon" />
+          <h2 className="featured-algos-title">Featured Algos🔥</h2>
+          <img src={WhiteCautionIcon} alt="Info" className="featured-algos-info-icon" />
         </div>
-        <svg className="featured-algos-info-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
-          <circle cx="8" cy="8" r="7" stroke="currentColor" strokeWidth="1.5"/>
-          <path d="M8 6V8M8 10V10.01" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-        </svg>
       </div>
 
       <div className="featured-algos-cards">
-        {featuredCards.map((card, index) => (
-          <div key={index} className={`featured-algos-card featured-algos-card-${card.type}`}>
+        {featuredCards.map((card, index) => {
+          const backgroundImage = 
+            card.type === 'highest-win-rate' ? BlueBg :
+            card.type === 'most-deployed' ? PurpleBg :
+            GreenBg
+          
+          const badgeIcon = 
+            card.type === 'highest-win-rate' ? TrophyBadgeIcon :
+            card.type === 'most-deployed' ? ManyPeopleIcon :
+            WhiteZigZagIcon
+          
+          return (
+          <div 
+            key={index} 
+            className={`featured-algos-card featured-algos-card-${card.type}`}
+            style={{ backgroundImage: `url(${backgroundImage})` }}
+          >
+            <div className={`featured-algos-card-badge featured-algos-card-badge-${card.type}`}>
+              <img src={badgeIcon} alt={card.label} className="featured-algos-badge-icon" />
+              <span className="featured-algos-badge-text">{card.label}</span>
+            </div>
             <div className="featured-algos-card-header">
-              <div className={`featured-algos-card-icon featured-algos-card-icon-${card.icon}`}>
-                {card.icon === 'trophy' && (
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M5 2H15V6H5V2Z" fill="currentColor"/>
-                    <path d="M7 6V10C7 12 8.5 13 10 13C11.5 13 13 12 13 10V6H7Z" fill="currentColor"/>
-                    <path d="M8 13V16H12V13" stroke="currentColor" strokeWidth="1.5"/>
-                    <path d="M9 16H11" stroke="currentColor" strokeWidth="1.5"/>
-                  </svg>
-                )}
-                {card.icon === 'people' && (
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <circle cx="7" cy="5" r="3" stroke="currentColor" strokeWidth="1.5"/>
-                    <path d="M2 16C2 13 4.5 11 7 11C9.5 11 12 13 12 16" stroke="currentColor" strokeWidth="1.5"/>
-                    <circle cx="13" cy="5" r="3" stroke="currentColor" strokeWidth="1.5"/>
-                    <path d="M18 16C18 13 15.5 11 13 11" stroke="currentColor" strokeWidth="1.5"/>
-                  </svg>
-                )}
-                {card.icon === 'chart' && (
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M3 16L8 11L12 15L17 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    <path d="M17 10V16H3V4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
-                  </svg>
-                )}
+              <div className="featured-algos-card-icon">
+                <img src={ThreeArrowsIcon} alt="Three Arrows" className="featured-algos-three-arrows-icon" />
               </div>
-              <span className="featured-algos-card-label">{card.label}</span>
             </div>
             <div className="featured-algos-card-content">
-              <div className="featured-algos-card-title">
-                {card.title}
-                <svg className="featured-algos-verified-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                  <circle cx="8" cy="8" r="7" fill="#4ade80"/>
-                  <path d="M5 8L7 10L11 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+              <div className="featured-algos-card-title-wrapper">
+                <h3 className={`featured-algos-card-title ${card.type === 'highest-win-rate' ? 'underlined' : ''}`}>
+                  Midcap Nifty Option Scalper CE
+                </h3>
+                <div className="featured-algos-card-provider">
+                  <span className="featured-algos-card-provider-text">By Stockwiz Tech. LLP</span>
+                  <img src={BlueTickIcon} alt="Verified" className="featured-algos-verified-icon" />
+                </div>
               </div>
-              <div className={`featured-algos-card-metric ${card.type === 'most-profitable' ? 'positive' : ''}`}>
-                {card.metric}
-              </div>
+              {card.type === 'highest-win-rate' ? (
+                <div className="featured-algos-card-metric-section win-rate">
+                  <span className="featured-algos-metric-label">Win Rate:</span>
+                  <span className="featured-algos-metric-value">+80.89%</span>
+                </div>
+              ) : card.type === 'most-deployed' ? (
+                <div className="featured-algos-card-metric-section most-deployed">
+                  <span className="featured-algos-metric-label">Most Deployed:</span>
+                  <span className="featured-algos-metric-value deployed">2,480 Users</span>
+                </div>
+              ) : (
+                <div className="featured-algos-card-metric-section most-profitable">
+                  <span className="featured-algos-metric-label">Most Profitable:</span>
+                  <span className="featured-algos-metric-value profitable">+₹2,480</span>
+                </div>
+              )}
             </div>
-            <button className={`featured-algos-card-button featured-algos-card-button-${card.buttonType}`}>
+            <button className={`featured-algos-card-button featured-algos-card-button-${card.buttonType} featured-algos-card-button-${card.type}`}>
               {card.buttonText}
             </button>
           </div>
-        ))}
+          )
+        })}
       </div>
     </div>
   )
