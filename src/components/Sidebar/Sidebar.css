@@ -140,9 +140,9 @@
 .active-side-box {
   position: absolute;
   left: -19px;
-  top: 0;
-  width: 6px;
-  height: 48px;
+  top: -4px;
+  width: 7px;
+  height: 41px;
   opacity: 1;
   border-top-right-radius: 11px;
   border-bottom-right-radius: 12px;

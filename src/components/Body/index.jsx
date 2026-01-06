@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import OrderFailed from './OrderFailed'
 import Greeting from './Greeting'
 import NiftyColumns from './NiftyColumns'
@@ -10,7 +11,12 @@ import './Body.css'
 
 function Body() {
   return (
-    <div className="body-container">
+    <motion.div 
+      className="body-container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
       <OrderFailed />
       <Greeting />
       <div className="body-indices-section">
@@ -24,7 +30,7 @@ function Body() {
       <div className="body-bottom-section">
         <FeaturedAlgos />
       </div>
-    </div>
+    </motion.div>
   )
 }
 

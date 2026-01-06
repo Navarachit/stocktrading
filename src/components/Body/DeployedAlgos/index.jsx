@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 import './DeployedAlgos.css'
 import ThunderIcon from '../../../assets/images/thunder.svg'
 import WhiteCautionIcon from '../../../assets/images/whiteCaution.svg'
@@ -105,10 +106,14 @@ function DeployedAlgos() {
 
       <div className="deployed-algos-list">
         {algos.map((algo, index) => (
-          <div 
+          <motion.div 
             key={index} 
             className={`deployed-algos-item ${selectedRowIndex === index ? 'active' : ''}`}
             onClick={() => setSelectedRowIndex(index)}
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3, delay: index * 0.05 }}
+            whileHover={{ x: 4, transition: { duration: 0.2 } }}
           >
             <div className="deployed-algos-item-left">
               <div className="deployed-algos-item-icon">
@@ -149,7 +154,7 @@ function DeployedAlgos() {
                 <span className="deployed-algos-pl-value">{algo.totalPL}</span>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

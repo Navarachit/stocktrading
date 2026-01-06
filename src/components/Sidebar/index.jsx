@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 import StrykeLogo from '../../assets/images/Stryke.svg'
 import XLogo from '../../assets/images/X.svg'
 import DashboardIcon from '../../assets/images/DashboardIcon.svg'
@@ -70,11 +71,15 @@ function Sidebar() {
         )}
 
         <div className="nav-items">
-          {filteredNavItems.map((item) => (
-            <div 
+          {filteredNavItems.map((item, index) => (
+            <motion.div 
               key={item.id}
               className={`nav-item ${activeItem === item.id ? 'active' : ''}`}
               onClick={() => handleNavClick(item.id)}
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3, delay: index * 0.05 }}
+              whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
             >
               {activeItem === item.id && <div className="active-side-box"></div>}
               <img src={item.icon} alt={item.label} className="nav-icon" />
@@ -84,7 +89,7 @@ function Sidebar() {
                   <path d="M3 4.5L6 7.5L9 4.5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               )}
-            </div>
+            </motion.div>
           ))}
         </div>
 

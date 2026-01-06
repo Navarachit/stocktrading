@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { motion } from 'framer-motion'
 import WhiteCautionIcon from '../../../assets/images/whiteCaution.svg'
 import BlackZigZagIcon from '../../../assets/images/blackzigzag.svg'
 import TvIcon from '../../../assets/images/tv.svg'
@@ -10,7 +11,12 @@ function OverallProfitLoss() {
   const [activeToggle, setActiveToggle] = useState('Live')
 
   return (
-    <div className="overall-profit-loss-card">
+    <motion.div 
+      className="overall-profit-loss-card"
+      initial={{ opacity: 0, scale: 0.98 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.4 }}
+    >
       <div className="overall-profit-loss-container-1">
         <div className="overall-profit-loss-header-row">
           <div className="overall-profit-loss-header-left">
@@ -71,7 +77,7 @@ function OverallProfitLoss() {
       <div className="overall-profit-loss-container-2">
         <AlgorithmList />
       </div>
-    </div>
+    </motion.div>
   )
 }
 

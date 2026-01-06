@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 import './FeaturedAlgos.css'
 import TrophyIcon from '../../../assets/images/trophy.svg'
 import WhiteCautionIcon from '../../../assets/images/whiteCaution.svg'
@@ -65,10 +66,14 @@ function FeaturedAlgos() {
             WhiteZigZagIcon
           
           return (
-          <div 
+          <motion.div 
             key={index} 
             className={`featured-algos-card featured-algos-card-${card.type}`}
             style={{ backgroundImage: `url(${backgroundImage})` }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            whileHover={{ y: -4, transition: { duration: 0.2 } }}
           >
             <div className={`featured-algos-card-badge featured-algos-card-badge-${card.type}`}>
               <img src={badgeIcon} alt={card.label} className="featured-algos-badge-icon" />
@@ -109,7 +114,7 @@ function FeaturedAlgos() {
             <button className={`featured-algos-card-button featured-algos-card-button-${card.buttonType} featured-algos-card-button-${card.type}`}>
               {card.buttonText}
             </button>
-          </div>
+          </motion.div>
           )
         })}
       </div>
