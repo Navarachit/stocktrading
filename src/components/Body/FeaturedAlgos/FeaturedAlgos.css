@@ -65,6 +65,157 @@
   background-repeat: no-repeat;
 }
 
+/* Gradient border using pseudo-element - only for highest win rate card */
+.featured-algos-card-highest-win-rate::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px; /* Border thickness */
+  background: linear-gradient(135deg, #59B8FF 0%, rgba(51, 108, 220, 0.3) 50%, #47B4B4 100%);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Make sure content appears above the border - only for highest win rate card */
+.featured-algos-card-highest-win-rate > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Gradient border for highest win rate card */
+.featured-algos-card-highest-win-rate::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(135deg, #59B8FF 0%, rgba(51, 108, 220, 0.3) 50%, #47B4B4 100%);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.featured-algos-card-highest-win-rate > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Radial gradient border for most deployed card */
+.featured-algos-card-most-deployed::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px; /* Border thickness */
+  background: radial-gradient(circle at 99% 10%, #89CDFF 0%, rgba(175, 150, 255, 0) 43%, #E34DFF 100%);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.featured-algos-card-most-deployed > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Gradient border for highest win rate card */
+.featured-algos-card-highest-win-rate::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: linear-gradient(135deg, #59B8FF 0%, rgba(51, 108, 220, 0.3) 50%, #47B4B4 100%);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.featured-algos-card-highest-win-rate > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Radial gradient border for most deployed card */
+.featured-algos-card-most-deployed::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px;
+  background: radial-gradient(circle at 99% 10%, #89CDFF 0%, rgba(175, 150, 255, 0) 43%, #E34DFF 100%);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.featured-algos-card-most-deployed > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Linear gradient border for most profitable card */
+.featured-algos-card-most-profitable::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 2px; /* Border thickness */
+  background: linear-gradient(72.89deg, #FFE476 -4.65%, rgba(37, 95, 75, 0) 52.36%, #4AB446 103.11%);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.featured-algos-card-most-profitable > * {
+  position: relative;
+  z-index: 2;
+}
+
 .featured-algos-card-badge {
   position: absolute;
   top: -2px;
@@ -179,12 +330,6 @@
   font-size: 18px;
   line-height: 1.4;
   margin: 0;
-}
-
-.featured-algos-card-title.underlined {
-  text-decoration: underline;
-  text-decoration-color: #3F72FF;
-  text-underline-offset: 4px;
 }
 
 .featured-algos-card-provider {
