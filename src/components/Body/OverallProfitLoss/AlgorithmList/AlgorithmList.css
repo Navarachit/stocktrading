@@ -1,0 +1,166 @@
+.algorithm-list-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.algorithm-list-table {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.algorithm-list-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 12px;
+}
+
+.algorithm-list-col {
+  color: #C7C7C7;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* Center Multiplier and P&L columns in header */
+.algorithm-list-header .algorithm-list-col:nth-child(2),
+.algorithm-list-header .algorithm-list-col:nth-child(3) {
+  text-align: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Hide Action heading */
+.algorithm-list-header .algorithm-list-col:nth-child(4) {
+  visibility: hidden;
+}
+
+.algorithm-list-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  overflow-y: scroll;
+  flex: 1;
+}
+
+/* Custom Scrollbar Styling */
+.algorithm-list-body::-webkit-scrollbar {
+  width: 8px;
+}
+
+.algorithm-list-body::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 4px;
+}
+
+.algorithm-list-body::-webkit-scrollbar-thumb {
+  background: #4A4A4A;
+  border-radius: 4px;
+  border-left: 2px solid #333333;
+}
+
+.algorithm-list-body::-webkit-scrollbar-thumb:hover {
+  background: #5a5a5a;
+}
+
+/* Firefox scrollbar */
+.algorithm-list-body {
+  scrollbar-width: thin;
+  scrollbar-color: #4A4A4A #1a1a1a;
+}
+
+.algorithm-list-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 12px;
+  align-items: center;
+  height: 60px;
+  flex-shrink: 0;
+  border-bottom: 1px solid #303030;
+  transition: background-color 0.2s ease;
+}
+
+.algorithm-list-row:hover {
+  background-color: #1a1a1a;
+}
+
+.algorithm-list-row.active {
+  background-color: #FFFFFF14;
+}
+
+.algorithm-list-row .algorithm-list-col {
+  color: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+/* Center Multiplier and P&L columns in rows */
+.algorithm-list-row .algorithm-list-col:nth-child(2),
+.algorithm-list-row .algorithm-list-col:nth-child(3) {
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.algorithm-list-icon {
+  width: 34px;
+  height: 30px;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.algorithm-list-col.positive {
+  color: #22D606;
+  cursor: pointer;
+}
+
+.algorithm-list-view-details-btn,
+.algorithm-list-square-off-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.algorithm-list-view-details-btn {
+  background-color: transparent;
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
+.algorithm-list-square-off-btn {
+  background-color: #3C0101;
+  color: #FFFFFF;
+  border: 1px solid #E01212;
+  font-size: 10px;
+}
+
+.algorithm-list-square-off-icon {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+}
+
+.algorithm-list-view-details-btn:hover,
+.algorithm-list-square-off-btn:hover {
+  opacity: 0.8;
+}
+

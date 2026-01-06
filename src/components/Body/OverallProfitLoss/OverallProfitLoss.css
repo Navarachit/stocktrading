@@ -1,0 +1,412 @@
+.overall-profit-loss-card {
+  width: 43.48%;
+  height: 537px;
+  border-radius: 12px;
+  background: radial-gradient(84.16% 60.29% at 50% 50%, #000A26 0%, #000000 100%);
+  opacity: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+
+/* Top-left corner
+.overall-profit-loss-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;          /* corner length */
+  height: 50%;         /* corner length */
+  border-top: 1px solid rgba(255,255,255,0.6);
+  border-left: 1px solid rgba(255,255,255,0.6);
+  border-radius: 12px 0 0 0;
+}
+
+/* Bottom-right corner */
+.overall-profit-loss-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;          /* corner length */
+  height: 50%; 
+  border-bottom: 1px solid rgba(255,255,255,0.6);
+  border-right: 1px solid rgba(255,255,255,0.6);
+  border-radius: 0 0 12px 0;
+} */
+
+.overall-profit-loss-container-1 {
+  border-radius: 8px;
+  padding: 10px;
+  gap: 10px;
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  background:
+    radial-gradient(
+      65% 80% at 50% 50%,
+      rgba(20, 35, 90, 0.9) 0%,
+      rgba(5, 10, 25, 0.85) 40%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  box-shadow:
+    inset 0 0 120px rgba(80, 120, 255, 0.25),
+    inset 0 0 200px rgba(0, 0, 0, 0.9);
+  border: none;
+}
+
+.overall-profit-loss-container-2 {
+  height: 100%;
+  overflow: hidden;
+  height: 339px;
+  border-radius: 8px;
+  opacity: 1;
+  background:
+    radial-gradient(
+      65% 80% at 50% 50%,
+      rgba(20, 35, 90, 0.9) 0%,
+      rgba(5, 10, 25, 0.85) 40%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  box-shadow:
+    inset 0 0 120px rgba(80, 120, 255, 0.25),
+    inset 0 0 200px rgba(0, 0, 0, 0.9);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.overall-profit-loss-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.overall-profit-loss-header-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.overall-profit-loss-title {
+  color: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 100%;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.overall-profit-loss-caution-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.overall-profit-loss-view-more {
+  color: #ffffff;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 11px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.overall-profit-loss-view-more:hover {
+  opacity: 0.8;
+}
+
+.overall-profit-loss-toggle-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.overall-profit-loss-toggles {
+  display: flex;
+  gap: 4px;
+  background-color: #2a2a2a;
+  border-radius: 6px;
+}
+
+.overall-profit-loss-toggle {
+  padding: 3px 12px;
+  border: none;
+  background: transparent;
+  color: #C7C7C7;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, width 0.3s ease, height 0.3s ease, padding 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 22px;
+  min-width: fit-content;
+  box-sizing: border-box;
+}
+
+.overall-profit-loss-toggle.active {
+  background-color: #FFFFFF;
+  color: #000000;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 100%;
+  letter-spacing: 0;
+  border-radius: 3px;
+  padding: 3px 12px;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  height: 22px;
+  min-width: fit-content;
+  box-sizing: border-box;
+}
+
+.overall-profit-loss-zigzag-icon {
+  width: 14.12px;
+  height: 7.06px;
+  object-fit: contain;
+}
+
+.overall-profit-loss-tv-icon {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.overall-profit-loss-lightning-btn {
+  background-color: #2a2a2a;
+  border: none;
+  border-radius: 6px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  height: 39px;
+  position: relative;
+  top: 5px;
+  width: 37px;
+}
+
+.overall-profit-loss-lightning-btn:hover {
+  background-color: #3a3a3a;
+}
+
+.overall-profit-loss-thunder-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.overall-profit-loss-main {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.overall-profit-loss-amount {
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+}
+
+.overall-profit-loss-amount-value {
+  color: #22D606;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+
+.overall-profit-loss-amount-transactions {
+  color: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: auto;
+  padding-left: 8px;
+}
+
+.overall-profit-loss-updated {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.overall-profit-loss-updated-label {
+  color: #C7C7C7;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.overall-profit-loss-updated-value {
+  color: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+}
+
+.overall-profit-loss-metrics {
+  display: flex;
+  gap: 4px;
+}
+
+.overall-profit-loss-metric {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px;
+  background-color: #000000;
+  border: 1px solid #474747;
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.overall-profit-loss-metric:nth-child(1) {
+  flex: 2;
+}
+
+.overall-profit-loss-metric:nth-child(2) {
+  flex: 2;
+}
+
+.overall-profit-loss-metric:nth-child(3) {
+  flex: 1;
+}
+
+.overall-profit-loss-metric:hover {
+  background-color: #1a1a1a;
+  border-color: #5a5a5a;
+}
+
+.overall-profit-loss-metric-label {
+  color: #C7C7C7;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 8px;
+}
+
+.overall-profit-loss-metric-value {
+  color: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.overall-profit-loss-metric-value.positive {
+  color: #22D606;
+}
+
+.overall-profit-loss-table {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.overall-profit-loss-table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #303030;
+}
+
+.overall-profit-loss-table-col {
+  color: #C7C7C7;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.overall-profit-loss-table-body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.overall-profit-loss-table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.overall-profit-loss-table-row .overall-profit-loss-table-col {
+  color: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.overall-profit-loss-table-icon {
+  color: #4ade80;
+  width: 12px;
+  height: 12px;
+}
+
+.overall-profit-loss-table-col.positive {
+  color: #4ade80;
+}
+
+.overall-profit-loss-view-details-btn,
+.overall-profit-loss-square-off-btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.overall-profit-loss-view-details-btn {
+  background-color: #3a3a3a;
+  color: #FFFFFF;
+}
+
+.overall-profit-loss-square-off-btn {
+  background-color: #dc2626;
+  color: #FFFFFF;
+}
+
+.overall-profit-loss-view-details-btn:hover,
+.overall-profit-loss-square-off-btn:hover {
+  opacity: 0.8;
+}
+

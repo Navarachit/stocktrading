@@ -1,0 +1,165 @@
+.featured-algos-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.featured-algos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.featured-algos-title-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.featured-algos-flame-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.featured-algos-title {
+  color: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 0;
+}
+
+.featured-algos-info-icon {
+  color: #C7C7C7;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.featured-algos-info-icon:hover {
+  color: #FFFFFF;
+}
+
+.featured-algos-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.featured-algos-card {
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-algos-card-highest-win-rate {
+  background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+}
+
+.featured-algos-card-most-deployed {
+  background: linear-gradient(135deg, #6b21a8 0%, #a855f7 100%);
+}
+
+.featured-algos-card-most-profitable {
+  background: linear-gradient(135deg, #166534 0%, #22c55e 100%);
+}
+
+.featured-algos-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.featured-algos-card-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+}
+
+.featured-algos-card-label {
+  color: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.featured-algos-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.featured-algos-card-title {
+  color: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.featured-algos-verified-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.featured-algos-card-metric {
+  color: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.featured-algos-card-metric.positive {
+  color: #4ade80;
+}
+
+.featured-algos-card-button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  backdrop-filter: blur(10px);
+}
+
+.featured-algos-card-button:hover {
+  opacity: 0.8;
+}
+
+.featured-algos-card-button-view {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.featured-algos-card-button-deploy {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 1200px) {
+  .featured-algos-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
