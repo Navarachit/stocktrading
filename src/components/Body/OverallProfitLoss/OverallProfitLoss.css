@@ -3,40 +3,38 @@
   height: 537px;
   border-radius: 12px;
   background: radial-gradient(84.16% 60.29% at 50% 50%, #000A26 0%, #000000 100%);
-  opacity: 1;
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   position: relative;
+  border: 1px solid transparent;
+  box-shadow: 
+    0 0 20px rgba(64, 122, 255, 0.3),
+    0 0 40px rgba(64, 122, 255, 0.2),
+    0 0 60px rgba(64, 122, 255, 0.1);
+  animation: borderGlow 3s ease-in-out infinite;
 }
 
-/* Top-left corner
-.overall-profit-loss-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;          /* corner length */
-  height: 50%;         /* corner length */
-  border-top: 1px solid rgba(255,255,255,0.6);
-  border-left: 1px solid rgba(255,255,255,0.6);
-  border-radius: 12px 0 0 0;
+@keyframes borderGlow {
+  0%, 100% {
+    box-shadow: 
+      0 0 20px rgba(64, 122, 255, 0.3),
+      0 0 40px rgba(64, 122, 255, 0.2),
+      0 0 60px rgba(64, 122, 255, 0.1);
+    border-color: rgba(64, 122, 255, 0.3);
+  }
+  50% {
+    box-shadow: 
+      0 0 30px rgba(64, 122, 255, 0.5),
+      0 0 60px rgba(64, 122, 255, 0.4),
+      0 0 90px rgba(64, 122, 255, 0.2);
+    border-color: rgba(64, 122, 255, 0.5);
+  }
 }
 
-/* Bottom-right corner */
-.overall-profit-loss-card::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 50%;          /* corner length */
-  height: 50%; 
-  border-bottom: 1px solid rgba(255,255,255,0.6);
-  border-right: 1px solid rgba(255,255,255,0.6);
-  border-radius: 0 0 12px 0;
-} */
 
+/* Bottom-right corner border with glow */
 .overall-profit-loss-container-1 {
   border-radius: 8px;
   padding: 10px;
