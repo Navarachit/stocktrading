@@ -88,36 +88,38 @@ function Sidebar() {
           ))}
         </div>
 
-        {sidebarOpen && (
-          <>
-            <div className="promo-card" style={{ backgroundImage: `url(${BlueSidebarBg})` }}>
-              <img src={WhiteXIcon} alt="X" className="promo-logo" />
-              <div className="promo-title">Contact Us</div>
-              <div className="promo-description">A.I Trading Bots Trading Bots Lorem Ipsum</div>
-              <button className="promo-button">Support</button>
-            </div>
-
-            <div className="credits-section">
-              <div className="credits-icon-container">
-                <img src={StarIcon} alt="Star" className="credits-icon" />
+        <div className="sidebar-bottom-section">
+          {sidebarOpen && (
+            <>
+              <div className="promo-card" style={{ backgroundImage: `url(${BlueSidebarBg})` }}>
+                <img src={WhiteXIcon} alt="X" className="promo-logo" />
+                <div className="promo-title">Contact Us</div>
+                <div className="promo-description">A.I Trading Bots Trading Bots Lorem Ipsum</div>
+                <button className="promo-button">Support</button>
               </div>
-              <span className="credits-label">Live Credits</span>
-              <div className="credits-count-badge">
-                <span className="credits-count-current">2</span>
-                <span className="credits-count-total">/4</span>
-              </div>
-            </div>
-          </>
-        )}
 
-        <div className="user-profile">
-          <div className="user-avatar">
-            <img src={MaleIcon} alt="User" className="user-avatar-icon" />
+              <div className="credits-section">
+                <div className="credits-icon-container">
+                  <img src={StarIcon} alt="Star" className="credits-icon" />
+                </div>
+                <span className="credits-label">Live Credits</span>
+                <div className="credits-count-badge">
+                  <span className="credits-count-current">2</span>
+                  <span className="credits-count-total">/4</span>
+                </div>
+              </div>
+            </>
+          )}
+
+          <div className="user-profile">
+            <div className="user-avatar">
+              <img src={MaleIcon} alt="User" className="user-avatar-icon" />
+            </div>
+            {sidebarOpen && <span className="user-name">John Smith</span>}
+            <button className="settings-button">
+              <img src={SettingsIcon} alt="Settings" className="settings-icon" />
+            </button>
           </div>
-          {sidebarOpen && <span className="user-name">John Smith</span>}
-          <button className="settings-button">
-            <img src={SettingsIcon} alt="Settings" className="settings-icon" />
-          </button>
         </div>
       </div>
       
