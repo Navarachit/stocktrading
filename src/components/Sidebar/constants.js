@@ -1,11 +1,14 @@
-// Navigation items configuration
+// Navigation items configuration with routes
 export const NAV_ITEMS = [
-  { id: 'dashboard', label: 'Dashboard', icon: 'DashboardIcon' },
-  { id: 'portfolio', label: 'Portfolio', icon: 'BriefcaseIcon' },
-  { id: 'pre-built-algos', label: 'Pre-Built Algos', icon: 'ZigZagIcon', hasChevron: true },
-  { id: 'my-algos', label: 'My Algos', icon: 'BarChartIcon' },
-  { id: 'my-account', label: 'My Account', icon: 'UserIcon' }
+  { id: 'dashboard', label: 'Dashboard', icon: 'DashboardIcon', path: '/dashboard' },
+  { id: 'portfolio', label: 'Portfolio', icon: 'BriefcaseIcon', path: '/portfolio' },
+  { id: 'pre-built-algos', label: 'Pre-Built Algos', icon: 'ZigZagIcon', hasChevron: true, path: '/pre-built-algos' },
+  { id: 'my-algos', label: 'My Algos', icon: 'BarChartIcon', path: '/my-algos' },
+  { id: 'my-account', label: 'My Account', icon: 'UserIcon', path: '/my-account' }
 ]
+
+// Default route (for now all routes point to dashboard)
+export const DEFAULT_ROUTE = '/dashboard'
 
 // User data
 export const USER_DATA = {

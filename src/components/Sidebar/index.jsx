@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useCallback } from 'react'
-import { NAV_ITEMS, USER_DATA, CREDITS_DATA, PROMO_CARD_DATA, SIDEBAR_CONFIG } from './constants'
+import { NAV_ITEMS, USER_DATA, CREDITS_DATA, PROMO_CARD_DATA } from './constants'
 import { filterNavItems } from './utils'
 import Logo from './components/Logo'
 import SearchBar from './components/SearchBar'
@@ -12,11 +12,11 @@ import './Sidebar.css'
 
 /**
  * Sidebar component - Main navigation sidebar with user profile and settings
+ * Now uses React Router for navigation
  * @returns {JSX.Element} Sidebar component
  */
 const Sidebar = () => {
   const [sidebarOpen, setSidebarOpen] = useState(true)
-  const [activeItem, setActiveItem] = useState('dashboard')
   const [searchQuery, setSearchQuery] = useState('')
 
   // Memoized filtered navigation items
@@ -27,10 +27,6 @@ const Sidebar = () => {
   // Handlers with useCallback for performance
   const handleToggleSidebar = useCallback(() => {
     setSidebarOpen(prev => !prev)
-  }, [])
-
-  const handleNavClick = useCallback((itemId) => {
-    setActiveItem(itemId)
   }, [])
 
   const handleSearchChange = useCallback((value) => {
@@ -67,9 +63,7 @@ const Sidebar = () => {
               key={item.id}
               item={item}
               index={index}
-              isActive={activeItem === item.id}
               sidebarOpen={sidebarOpen}
-              onClick={handleNavClick}
             />
           ))}
         </nav>
