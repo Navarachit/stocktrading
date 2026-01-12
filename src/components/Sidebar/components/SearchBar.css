@@ -1,0 +1,37 @@
+.search-bar {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 40px 10px 12px;
+  background-color: #2a2a2a;
+  border: none;
+  border-radius: 6px;
+  color: #C7C7C7;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  transition: background-color 0.2s ease;
+}
+
+.search-bar input:focus {
+  outline: none;
+  background-color: #333;
+}
+
+.search-bar input::placeholder {
+  color: #C7C7C7;
+}
+
+.search-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}

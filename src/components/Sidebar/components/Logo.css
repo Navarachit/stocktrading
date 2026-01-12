@@ -1,0 +1,18 @@
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.logo-stryke-svg {
+  width: 68.7523193359375px;
+  height: 21.224720001220703px;
+  opacity: 1;
+}
+
+.logo-x-svg {
+  width: 25.40395164489746px;
+  height: 24.2421817779541px;
+  opacity: 1;
+  transform: rotate(0deg);
+}

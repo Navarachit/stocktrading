@@ -1,0 +1,69 @@
+.promo-card {
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: visible;
+}
+
+.promo-logo {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 12px;
+  object-fit: contain;
+}
+
+.promo-title {
+  color: #FFFFFF;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  margin-bottom: 8px;
+  margin-top: 0;
+}
+
+.promo-description {
+  color: white;
+  font-size: 12px;
+  opacity: 0.9;
+  margin-bottom: 16px;
+  line-height: 1.4;
+  margin-top: 0;
+}
+
+.promo-button {
+  width: 100%;
+  padding: 10px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14.18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.promo-button:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.promo-button:active {
+  transform: translateY(0);
+}
+
+.promo-button:focus {
+  outline: 2px solid #407AFF;
+  outline-offset: 2px;
+}

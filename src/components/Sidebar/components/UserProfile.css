@@ -1,0 +1,50 @@
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.user-avatar {
+  flex-shrink: 0;
+}
+
+.user-avatar-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.user-name {
+  flex: 1;
+  color: white;
+  font-size: 14px;
+}
+
+.settings-button {
+  background-color: #2a2a2a;
+  border: none;
+  border-radius: 6px;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease;
+}
+
+.settings-button:hover {
+  background-color: #333;
+}
+
+.settings-button:focus {
+  outline: 2px solid #407AFF;
+  outline-offset: 2px;
+}
+
+.settings-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}

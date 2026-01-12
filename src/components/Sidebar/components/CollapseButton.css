@@ -1,0 +1,31 @@
+.collapse-button {
+  position: absolute;
+  top: 11.5%;
+  left: -12px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-color: black;
+  border: 1.17px solid #202020;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.collapse-button:hover {
+  background-color: #333;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.collapse-button:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.collapse-button:focus {
+  outline: 2px solid #407AFF;
+  outline-offset: 2px;
+}
